@@ -52,9 +52,6 @@ class BaseApp extends ApplicationTestCase
      */
     protected function execRequest(Request $request, bool $clearCache = true): Response
     {
-        print_r($this->app()->getSession());
-        $this->app()->getSession()->set('is_logged_in', 'yes');
-
         $response = parent::execRequest($request, $clearCache);
 
         $this->app()->clearCachedObjects();
