@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "json-schema://test/update.json#",
+  "type": "object",
+  "properties": {
+    "value": {"type": "integer", "minimum": 0},
+    "tag": {
+      "allOf": [
+        {"type": "string"},
+        {"$ref": "/$enum/tag1,tag2,tag3"}
+      ]
+    }
+  },
+  "minProperties": 1,
+  "additionalProperties": false
+}

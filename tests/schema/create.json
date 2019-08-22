@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "json-schema://test/create.json#",
+  "type": "object",
+  "properties": {
+    "name": {"type": "string"},
+    "value": {"type": "integer", "minimum": 0},
+    "tag": {
+      "allOf": [
+        {"type": "string"},
+        {"$ref": "/$enum/tag1,tag2,tag3"}
+      ]
+    }
+  },
+  "required": ["name", "value"],
+  "additionalProperties": false
+}
