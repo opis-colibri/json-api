@@ -1,0 +1,51 @@
+{
+    "name": "opis-colibri/json-api",
+    "type": "opis-colibri-module",
+    "description": "JSON API",
+    "keywords": ["opis colibri", "module", "json", "api"],
+    "homepage": "http://opis.io",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Marius Sarca",
+            "email": "marius.sarca@gmail.com"
+        },
+        {
+            "name": "Sorin Sarca",
+            "email": "sarca_sorin@hotmail.com"
+        }
+    ],
+    "require": {
+        "opis/colibri": "2.0.x-dev",
+        "opis/json-schema": "^1.0.0",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Opis\\Colibri\\Modules\\JsonAPI\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Opis\\Colibri\\Modules\\JsonAPI\\Test\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "extra": {
+        "module": {
+            "title": "JSON API",
+            "collector": "Opis\\Colibri\\Modules\\JsonAPI\\Collector",
+            "installer": "Opis\\Colibri\\Modules\\JsonAPI\\Installer"
+        },
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
