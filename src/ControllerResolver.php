@@ -19,9 +19,18 @@ namespace Opis\Colibri\Modules\JsonAPI;
 
 use stdClass;
 use Opis\Http\Request;
+use function Opis\Colibri\Functions\controller;
 
 abstract class ControllerResolver
 {
+    /**
+     * @return callable
+     */
+    public static function apiController(): callable
+    {
+        return controller('@controller', '@action');
+    }
+
     /**
      * @param Request $request
      * @return stdClass
@@ -72,7 +81,7 @@ abstract class ControllerResolver
             return 'http404';
         }
 
-        $config = $config['actions'][$actionScope ?? 'instance'] ?? null;
+        $config = $config['actions'][$actionScope ?? 'default'] ?? null;
 
         if (!$config) {
             return 'http404';
