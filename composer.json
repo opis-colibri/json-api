@@ -16,9 +16,9 @@
         }
     ],
     "require": {
-        "opis/colibri": "2.0.x-dev",
-        "opis/json-schema": "^1.0.0",
-        "ext-json": "*"
+        "ext-json": "*",
+        "opis-colibri/core": "^1.0",
+        "opis/json-schema": "^1.0"
     },
     "autoload": {
         "psr-4": {
